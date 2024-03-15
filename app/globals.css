@@ -1,11 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
 
 @layer utilities {
   .gradient-indigo-violet {
-    @apply bg-gradient-to-tl from-indigo-600 to-violet-600 bg-clip-text text-transparent
+    @apply bg-gradient-to-tl from-indigo-600 to-violet-600 bg-clip-text text-transparent;
   }
 }
 
