@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Snippets {
-  id   String @id @default(uuid())
-  name String
-  code String
+  id    String @id @default(uuid())
+  title String
+  code  String
 }
