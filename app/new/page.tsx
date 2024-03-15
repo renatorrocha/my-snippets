@@ -1,5 +1,6 @@
 "use client";
 
+import { createSnippet } from "@/actions";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,6 +8,7 @@ import { SnippetSchema, SnippetType } from "@/schema/Snippet.validator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 export default function NewSnippetPage() {
   const SnippetForm = useForm<SnippetType>({
@@ -14,7 +16,8 @@ export default function NewSnippetPage() {
   });
 
   function onSubmit(data: SnippetType) {
-    console.log(data);
+    createSnippet(data);
+    toast.success("Snippet created successfully");
   }
 
   return (
@@ -23,7 +26,7 @@ export default function NewSnippetPage() {
       onSubmit={SnippetForm.handleSubmit(onSubmit)}
       className="flex flex-col flex-1 gap-4 items-end"
     >
-      <Input placeholder="Name" {...SnippetForm.register("name")} />
+      <Input placeholder="Title" {...SnippetForm.register("title")} />
 
       <Textarea
         placeholder="Type your code here."
