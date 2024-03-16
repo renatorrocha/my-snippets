@@ -2,6 +2,7 @@
 
 import prisma from "@/prisma/prisma-client";
 import { SnippetType } from "@/schema/Snippet.validator";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function createSnippet(snippet: SnippetType) {
@@ -21,5 +22,18 @@ export async function createSnippet(snippet: SnippetType) {
       return { message: "Something went wrong!" };
     }
   }
+
+  revalidatePath("/");
+  redirect("/");
+}
+
+export async function deleteSnippet(Snippet_Id: string) {
+  await prisma.snippets.delete({
+    where: {
+      id: Snippet_Id,
+    },
+  });
+
+  revalidatePath("/");
   redirect("/");
 }
