@@ -14,7 +14,7 @@ export default function Navbar() {
       <Link
         href="https://www.linkedin.com/in/renato-rrodrigues/"
         target="_blank"
-        className={buttonVariants({ size: "icon" })}
+        className={buttonVariants({ size: "icon", variant: "secondary" })}
       >
         <Linkedin />
       </Link>
