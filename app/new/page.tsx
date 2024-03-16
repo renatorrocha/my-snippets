@@ -21,26 +21,28 @@ export default function NewSnippetPage() {
   }
 
   return (
-    <form
-      {...SnippetForm}
-      onSubmit={SnippetForm.handleSubmit(onSubmit)}
-      className="flex flex-col flex-1 gap-4 items-end"
-    >
-      <Input placeholder="Title" {...SnippetForm.register("title")} />
+    <section className="flex flex-col gap-4">
+      <h1 className="text-3xl font-bold text-primary">Create Snippet</h1>
+      <form
+        onSubmit={SnippetForm.handleSubmit(onSubmit)}
+        className="flex flex-1 flex-col items-end gap-4"
+      >
+        <Input placeholder="Title" {...SnippetForm.register("title")} />
 
-      <Textarea
-        placeholder="Type your code here."
-        className="resize-none"
-        {...SnippetForm.register("code")}
-      />
+        <Textarea
+          placeholder="Type your code here."
+          className="resize-none"
+          {...SnippetForm.register("code")}
+        />
 
-      <div className="flex gap-4">
-        <Link href="/" className={buttonVariants({ variant: "outline" })}>
-          Back
-        </Link>
+        <div className="flex gap-4">
+          <Link href="/" className={buttonVariants({ variant: "outline" })}>
+            Back
+          </Link>
 
-        <Button type="submit">Create</Button>
-      </div>
-    </form>
+          <Button type="submit">Create</Button>
+        </div>
+      </form>
+    </section>
   );
 }

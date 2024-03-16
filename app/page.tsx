@@ -1,7 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import prisma from "@/prisma/prisma-client";
-import { Eye } from "lucide-react";
 import Link from "next/link";
 
 export default async function Home() {
@@ -29,6 +28,7 @@ export default async function Home() {
       >
         New Snippet
       </Link>
+
       <div className="flex w-full flex-1 flex-col gap-4 px-4">
         {renderedSnippets}
       </div>
