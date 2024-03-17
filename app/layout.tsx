@@ -20,10 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className=" mx-auto max-h-screen w-full max-w-screen-lg px-8 md:px-12">
+        <main className="mx-auto mb-16 max-h-screen w-full max-w-screen-lg px-8">
           {children}
         </main>
-        <Toaster />
+        <Toaster position="top-right" />
       </body>
     </html>
   );

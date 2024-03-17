@@ -21,8 +21,8 @@ export default async function SnippedShowPage(props: {
 
   return (
     <div className="flex w-full flex-col gap-8">
-      <div className="flex items-center justify-between">
-        <p className="w-96 truncate text-3xl font-bold text-primary">
+      <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+        <p className=" truncate text-3xl font-bold text-primary">
           {snippet.title}
         </p>
 
