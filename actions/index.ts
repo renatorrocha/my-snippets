@@ -37,3 +37,12 @@ export async function deleteSnippet(Snippet_Id: string) {
   revalidatePath("/");
   redirect("/");
 }
+
+export async function getSnippetById(Snippet_Id: string) {
+  const snippet = await prisma.snippets.findFirst({
+    where: {
+      id: Snippet_Id,
+    },
+  });
+  return snippet;
+}
