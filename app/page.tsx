@@ -10,7 +10,7 @@ export default async function Home() {
     <Link
       key={snippet.id}
       href={`/${snippet.id}`}
-      className="flex justify-between rounded border p-4 shadow-md transition-all duration-300 hover:scale-105 hover:font-semibold"
+      className="animate-3s-all flex justify-between rounded border p-4 shadow-md hover:scale-105 hover:font-semibold"
     >
       <p>{snippet.title}</p>
       <p>View</p>
@@ -21,10 +21,7 @@ export default async function Home() {
     <section className="flex flex-col items-end gap-4">
       <Link
         href="/new"
-        className={cn(
-          buttonVariants(),
-          "transition-all duration-300 hover:scale-105",
-        )}
+        className={cn(buttonVariants(), "animate-3s-all hover:scale-105")}
       >
         New Snippet
       </Link>

@@ -13,12 +13,12 @@ export default function CopyCodeArea({ code }: CopyCodeAreaProps) {
   }
 
   return (
-    <div>
+    <div className="container">
       <pre
         onClick={() => copyCode(code)}
-        className="rounded border bg-gray-100 p-4 transition-all duration-300 hover:cursor-pointer hover:bg-primary-foreground"
+        className="animate-3s-all group rounded border bg-gray-50 p-4 shadow-md hover:cursor-pointer hover:bg-gray-100"
       >
-        <code>{code}</code>
+        <code className="animate-3s-all group-hover:font-semibold">{code}</code>
       </pre>
       <p className="mt-4 text-center text-xs text-muted-foreground">
         Click the code snippet to copy it to your clipboard.

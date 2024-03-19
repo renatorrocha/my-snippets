@@ -6,6 +6,10 @@
   .gradient-indigo-violet {
     @apply bg-gradient-to-tl from-indigo-600 to-violet-600 bg-clip-text text-transparent;
   }
+
+  .animate-3s-all {
+    @apply transition-all duration-300;
+  }
 }
 
 @layer base {

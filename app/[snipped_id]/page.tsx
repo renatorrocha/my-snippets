@@ -38,7 +38,6 @@ export default async function SnippedShowPage(props: {
       </div>
 
       <CopyCodeArea code={snippet.code} />
-
     </div>
   );
 }
