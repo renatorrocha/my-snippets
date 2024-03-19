@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# My Snippets
 
-First, run the development server:
+The "My Snippets" is a web application designed to help developers organize and manage their frequently used code snippets. Whether you’re a seasoned programmer or just starting out, this app streamlines your workflow by providing a central place to store, retrieve, and share code snippets.
+
+
+## Screenshot
+
+![App Screenshot](public/Screenshot_home.png)
+
+
+## Tech Stack
+
+**FrontEnd:** React, Next.js, Tailwind Css, Monaco Editor, Next Themes, Shadcn/ui
+
+**Backend:** Prisma, Zod, Node
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/renatorrocha/my-snippets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd my-snippets
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Initialize Prisma types
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npx prisma generate
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Apply all migrations
 
-## Deploy on Vercel
+```bash
+  npx prisma migrate deploy
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+  npm run dev
+```
+
