@@ -16,9 +16,16 @@ export default function Navbar() {
         <Link
           href="https://www.linkedin.com/in/renato-rrodrigues/"
           target="_blank"
-          className={buttonVariants({ size: "icon", variant: "secondary" })}
+          className={buttonVariants({ variant: "secondary" })}
         >
-          <Linkedin />
+          <p className="hidden font-semibold md:block">
+            Linked{" "}
+            <span className="rounded bg-blue-500 px-1 py-0.5 text-white">
+              in
+            </span>
+          </p>
+
+          <Linkedin className="block fill-blue-500 text-blue-500 md:hidden " />
         </Link>
       </div>
     </nav>
