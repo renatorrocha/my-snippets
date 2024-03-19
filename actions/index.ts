@@ -46,3 +46,17 @@ export async function getSnippetById(Snippet_Id: string) {
   });
   return snippet;
 }
+
+export async function updateSnippet(id: string | undefined, code: string) {
+  await prisma.snippets.update({
+    where: {
+      id,
+    },
+    data: {
+      code,
+    },
+  });
+
+  revalidatePath(`/${id}`);
+  redirect(`/${id}`);
+}

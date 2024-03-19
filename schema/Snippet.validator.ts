@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const SnippetSchema = z.object({
+  id: z.string().optional(),
   title: z
     .string()
     .min(3, "Snippet title needs to be at least 3 characters.")

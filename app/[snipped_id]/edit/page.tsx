@@ -1,6 +1,7 @@
 import { getSnippetById } from "@/actions";
 import SnippedEditForm from "@/components/snippet-edit-form";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -23,6 +24,7 @@ export default async function SnippetEditPage(props: {
         </p>
       </div>
       <SnippedEditForm {...snippet} />
+
     </div>
   );
 }
