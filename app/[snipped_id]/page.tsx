@@ -1,4 +1,5 @@
 import * as actions from "@/actions";
+import CopyCodeArea from "@/components/copy-code-area";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -36,9 +37,8 @@ export default async function SnippedShowPage(props: {
         </div>
       </div>
 
-      <pre className="rounded border bg-primary-foreground p-4">
-        <code>{snippet.code}</code>
-      </pre>
+      <CopyCodeArea code={snippet.code} />
+
     </div>
   );
 }
