@@ -1,17 +1,13 @@
 import * as actions from "@/actions";
 import { Button, buttonVariants } from "@/components/ui/button";
-import prisma from "@/prisma/prisma-client";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
-import { toast } from "sonner";
 
 export default async function SnippedShowPage(props: {
   params: { snipped_id: string };
 }) {
-  const snippet = await prisma.snippets.findFirst({
-    where: { id: props.params.snipped_id },
-  });
+  const snippet = await actions.getSnippetById(props.params.snipped_id);
 
   if (!snippet) {
     return notFound();

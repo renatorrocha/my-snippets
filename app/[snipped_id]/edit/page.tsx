@@ -16,8 +16,8 @@ export default async function SnippetEditPage(props: {
 
   return (
     <div className="flex w-full flex-col gap-8">
-      <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
-        <p className="truncate text-3xl">
+      <div className="flex flex-col items-center">
+        <p className="truncate text-wrap text-center text-lg md:text-3xl">
           Editing snippets{" "}
           <span className="font-bold text-primary">{snippet.title}</span>
         </p>
